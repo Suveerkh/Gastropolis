@@ -12,11 +12,10 @@ function updateCart() {
     let total = 0;
     cart.forEach(item => {
         const itemDiv = document.createElement('div');
-        itemDiv.innerText = `${item.title} - $${item.price}`;
+        itemDiv.innerText = `${item.title} - Free`; // Update price to "Free"
         cartItemsDiv.appendChild(itemDiv);
-        total += item.price;
     });
-    totalPriceDisplay.innerText = `Total: $${total.toFixed(2)}`;
+    totalPriceDisplay.innerText = `Total: Free`; // Update total display
 }
 
 // Example of adding a game to the cart
@@ -25,9 +24,21 @@ buyButtons.forEach((button, index) => {
     button.addEventListener('click', () => {
         const game = {
             title: `Game Title ${index + 1}`,
-            price: index === 0 ? 29.99 : 39.99 // Example prices
+            price: 0 // Set price to 0 since all games are free
         };
         addToCart(game);
+    });
+});
+
+// Handle download buttons
+const downloadButtons = document.querySelectorAll('.download-button');
+downloadButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const file = event.target.getAttribute('data-file');
+        // Trigger a download action
+        alert(`Starting download for ${file}`);
+        // In a real application, this would link to an actual file:
+        // window.location.href = file; // Uncomment for actual download
     });
 });
 
