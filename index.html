@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phantom Games</title>
+    <title>My Game Store - Free Downloads</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>My Game Store</h1>
+        <div class="logo">
+            <h1>My Game Store</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Games</a></li>
-                <li><a href="#">Sales</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Library</a></li>
                 <li><a href="#">Account</a></li>
             </ul>
         </nav>
@@ -22,42 +24,31 @@
     <main>
         <section class="hero-banner">
             <img src="banner.jpg" alt="Featured Game">
-            <h2>Featured Game: Gastropolis</h2>
+            <h2>Featured Game: Awesome Adventure</h2>
         </section>
 
-        <section class="game-sections">
-    <h2>New Releases</h2>
-    <div class="game-list">
-        <div class="game-item">
-            <img src="game1.jpg" alt="Game 1">
-            <h3>Gastropolis</h3>
-            <p>Price: Free</p>
-            <button class="download-button" data-file="gastropolis.zip">Download Now</button>
-        </div>
-        <div class="game-item">
-            <img src="game2.jpg" alt="Game 2">
-            <h3>Motel Simulator</h3>
-            <p>Price: Free</p>
-            <button class="download-button" data-file="motel-simulator.zip">Download Now</button>
-        </div>
-        <!-- Add more game items as needed -->
-    </div>
-</section>
-
-        <!-- Add this section in your main area -->
-<section class="shopping-cart">
-    <h2>Shopping Cart</h2>
-    <div id="cart-items"></div>
-    <p id="total-price">Total: $0.00</p>
-    <button id="checkout">Checkout</button>
-</section>
-
+        <section class="game-list">
+            <h2>Browse Free Games</h2>
+            <div class="games">
+                <div class="game-item">
+                    <img src="game1.jpg" alt="Game 1">
+                    <h3>Game Title 1</h3>
+                    <a href="games/game1.zip" download class="download-button">Download Now</a>
+                </div>
+                <div class="game-item">
+                    <img src="game2.jpg" alt="Game 2">
+                    <h3>Game Title 2</h3>
+                    <a href="games/game2.zip" download class="download-button">Download Now</a>
+                </div>
+                <!-- More game items -->
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Phantom Games. All rights reserved.</p>
+        <p>&copy; 2024 My Game Store. All rights reserved.</p>
     </footer>
-        <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
