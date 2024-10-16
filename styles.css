@@ -1,56 +1,109 @@
-body {
-    font-family: Arial, sans-serif;
+/* Basic reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
-header {
-    background: #000;
+body {
+    background-color: #121212;
+    font-family: Arial, sans-serif;
     color: #fff;
+}
+
+/* Header */
+header {
+    background-color: #202020;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
+header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+header nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+header nav ul li {
+    font-size: 18px;
 }
 
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hero banner */
 .hero-banner {
-    position: relative;
+    background-color: #1c1c1c;
+    padding: 50px;
     text-align: center;
-    color: white;
 }
 
 .hero-banner img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
 }
 
-.game-sections {
-    padding: 20px;
+.hero-banner h2 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #fff;
 }
 
+/* Game list */
 .game-list {
+    padding: 40px;
+}
+
+.game-list h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.games {
     display: flex;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .game-item {
-    background: white;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    width: calc(25% - 40px);
-    box-sizing: border-box;
+    background-color: #1c1c1c;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .game-item img {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.game-item h3 {
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+/* Download button */
+.download-button {
+    display: inline-block;
+    background-color: #1f7aec;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #4299f5;
 }
